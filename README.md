@@ -4,6 +4,8 @@ Colemak-Qwerty hotkeys XKB configuration files for Linux(Ubuntu 20.04)
 
 Inspired by https://github.com/ZeptByteS/dvorak-qwerty
 
+# Installation
+
 #### 1. Copy the "colemak_qwerty" file
 
 ```
