@@ -44,3 +44,37 @@ Copy the text from the "us-colemak" file and past it at the and of the xkb "us" 
 ```
 sudo gedit /usr/share/X11/xkb/symbols/us
 ```
+
+#### 4. Update the "evdev.xml" file
+
+Add
+```
+        <variant>
+          <configItem>
+            <name>colemak-qwerty</name>
+            <description>English (Colemak-Qwerty)</description>
+          </configItem>
+        </variant>
+```
+to the "evdev.xml" file (for the "us" section)
+```
+sudo gedit /usr/share/X11/xkb/rules/evdev.xml
+```
+
+It should look like this:
+```
+...
+            <description>English (Colemak)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>colemak-qwerty</name>
+            <description>English (Colemak-Qwerty)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>dvorak</name>
+...
+```
