@@ -5,13 +5,15 @@ Colemak-Qwerty hotkeys XKB configuration files for Linux(Ubuntu 20.04)
 Inspired by https://github.com/ZeptByteS/dvorak-qwerty
 
 #### 1. Copy the "colemak_qwerty" file
+
 ```
 git clone https://github.com/the-devil-you-know/colemak-qwerty-x11-xkb.git
 cd colemak-qwerty-x11-xkb
 sudo cp colemak_qwerty /usr/share/X11/xkb/types/colemak_qwerty
 ```
 
-#### 2. Update the "complete" file
+#### 2. Update the xkb "complete" file
+
 Add `include "colemak_qwerty"` to the "complete" file
 
 ```
@@ -30,4 +32,11 @@ default xkb_types "complete" {
     include "numpad"
     include "colemak_qwerty"
 };
+```
+
+#### 3. Update the "us" file
+
+Copy the text from the "us-colemak" file and past it at the and of the xkb "us" file
+```
+sudo gedit /usr/share/X11/xkb/symbols/us
 ```
