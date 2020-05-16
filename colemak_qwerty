@@ -1,7 +1,7 @@
 partial default xkb_types "default" {
     virtual_modifiers Meta,LevelThree,Alt,Super;
 
-    type "DVORAK_QWERTY" {
+    type "COLEMAK_QWERTY" {
         modifiers = None+Shift+Lock+Control+Alt+Super+LevelThree;
         map[None] = level1;
         map[Shift] = level2;
