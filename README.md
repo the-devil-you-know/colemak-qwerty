@@ -78,3 +78,5 @@ It should look like this:
             <name>dvorak</name>
 ...
 ```
+
+#### 5. After reboot, you can choose the Colemak-Qwerty layout!
