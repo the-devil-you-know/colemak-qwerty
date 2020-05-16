@@ -1,7 +1,7 @@
 partial alphanumeric_keys
-xkb_symbols "dvorak-qwerty" {
+xkb_symbols "colemak-qwerty" {
 
-    name[Group1]= "English (Dvorak-Qwerty)";
+    name[Group1]= "English (Colemak-Qwerty)";
 
     key <TLDE> { [ grave, asciitilde, dead_grave, dead_tilde  ] };
     key <AE01> { [ 1, exclam ] };
@@ -15,7 +15,7 @@ xkb_symbols "dvorak-qwerty" {
     key <AE09> { [ 9, parenleft, dead_grave] };
     key <AE10> { [ 0, parenright ] };
     key <BKSL> { [ backslash, bar ] };
-    key.type[group1]="DVORAK_QWERTY";
+    key.type[group1]="COLEMAK_QWERTY";
     key <AC01> { [ a, A, a, A],
     actions[Group1]= [ NoAction(), NoAction(),
                        RedirectKey(key=<AC01>, clearmods=Lock),
