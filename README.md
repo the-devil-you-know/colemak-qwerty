@@ -6,6 +6,8 @@ Inspired by https://github.com/ZeptByteS/dvorak-qwerty
 
 # Installation
 
+It will take 2 minutes
+
 #### 1. Copy the "colemak_qwerty" file
 
 ```
