@@ -67,12 +67,14 @@ It should look like this:
             <description>English (Colemak)</description>
           </configItem>
         </variant>
+
         <variant>
           <configItem>
             <name>colemak-qwerty</name>
             <description>English (Colemak-Qwerty)</description>
           </configItem>
         </variant>
+
         <variant>
           <configItem>
             <name>dvorak</name>
