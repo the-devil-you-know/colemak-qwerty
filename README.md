@@ -8,17 +8,17 @@ Inspired by https://github.com/ZeptByteS/dvorak-qwerty
 
 It will take 2 minutes
 
-#### 1. Copy the "colemak_qwerty" file
+#### 1. Copy the "ctrl_qwerty" file
 
 ```
 git clone https://github.com/the-devil-you-know/colemak-qwerty-x11-xkb.git
 cd colemak-qwerty-x11-xkb
-sudo cp colemak_qwerty /usr/share/X11/xkb/types/colemak_qwerty
+sudo cp ctrl_qwerty /usr/share/X11/xkb/types/ctrl_qwerty
 ```
 
 #### 2. Update the xkb "complete" file
 
-Add `include "colemak_qwerty"` to the "complete" file
+Add `include "ctrl_qwerty"` to the "complete" file
 
 ```
 sudo gedit /usr/share/X11/xkb/types/complete
@@ -34,7 +34,7 @@ default xkb_types "complete" {
     include "level5"
     include "extra"
     include "numpad"
-    include "colemak_qwerty"
+    include "ctrl_qwerty"
 };
 ```
 
