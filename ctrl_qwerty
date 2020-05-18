@@ -1,6 +1,6 @@
 partial default xkb_types "default" {
 
-    type "COLEMAK_QWERTY" {
+    type "CTRL_QWERTY" {
 
         modifiers = None+Shift+Control;
 
