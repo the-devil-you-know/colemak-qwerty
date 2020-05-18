@@ -1,5 +1,3 @@
-# In process since 2020-05-16
-
 Colemak-Qwerty hotkeys XKB configuration files for Linux(Ubuntu 20.04)
 
 Inspired by https://github.com/ZeptByteS/dvorak-qwerty
