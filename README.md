@@ -9,9 +9,9 @@ It will take 2 minutes
 #### 1. Copy the "ctrl_qwerty" file
 
 ```
-git clone https://github.com/the-devil-you-know/colemak-qwerty-x11-xkb.git
-cd colemak-qwerty-x11-xkb
-sudo cp ctrl_qwerty /usr/share/X11/xkb/types/ctrl_qwerty
+$ git clone https://github.com/the-devil-you-know/colemak-qwerty-x11-xkb.git
+$ cd colemak-qwerty-x11-xkb
+$ sudo cp ctrl_qwerty /usr/share/X11/xkb/types/ctrl_qwerty
 ```
 
 #### 2. Update the xkb "complete" file
@@ -19,7 +19,7 @@ sudo cp ctrl_qwerty /usr/share/X11/xkb/types/ctrl_qwerty
 Add `include "ctrl_qwerty"` to the "complete" file
 
 ```
-sudo gedit /usr/share/X11/xkb/types/complete
+$ sudo gedit /usr/share/X11/xkb/types/complete
 ```
 
 It should look like this:
@@ -40,7 +40,7 @@ default xkb_types "complete" {
 
 Copy the text from the "us-colemak" file and past it at the and of the xkb "us" file
 ```
-sudo gedit /usr/share/X11/xkb/symbols/us
+$ sudo gedit /usr/share/X11/xkb/symbols/us
 ```
 
 #### 4. Update the "evdev.xml" file
@@ -56,7 +56,7 @@ Add
 ```
 to the "evdev.xml" file (for the "us" section)
 ```
-sudo gedit /usr/share/X11/xkb/rules/evdev.xml
+$ sudo gedit /usr/share/X11/xkb/rules/evdev.xml
 ```
 
 It should look like this:
