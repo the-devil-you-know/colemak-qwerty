@@ -18,7 +18,7 @@ xkb_symbols "colemak-qwerty" {
     key <AE12> { [ equal, plus ] };
     key <BKSL> { [ backslash, bar ] };
 
-    key.type[group1]="COLEMAK_QWERTY";
+    key.type[group1]="CTRL_QWERTY";
     key <AD01> { [ q, Q, q, Q ] };
     key <AD02> { [ w, W, w, W ] };
     key <AD03> { [ f, F, e, E ] };
