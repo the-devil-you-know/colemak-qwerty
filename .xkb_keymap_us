@@ -1,0 +1,77 @@
+xkb_keymap {
+
+    xkb_compat { include "complete" };
+
+    xkb_geometry { include "pc(pc105)" };
+
+    xkb_types {
+
+        include "complete"  
+
+        type "CTRL_QWERTY" {
+
+            modifiers = None+Shift+Control;
+
+            map[None] = Level1;
+            map[Shift] = Level2;
+            map[Control] = Level3;
+
+            level_name[Level1]= "Base";
+            level_name[Level2]= "Shift";
+            level_name[Level3]= "Control";
+
+            // Fix (Shift+n opens new terminal)
+            preserve[Control] = Control;
+        };
+    };
+    
+    xkb_keycodes {
+
+        include "evdev+aliases(qwerty)"
+
+        <RUS1> = 121;
+        <RUS2> = 122;
+        <RUS3> = 123;
+    };
+
+    xkb_symbols {
+        include "pc+us"        
+
+
+        // ////
+        // Ctrl_l is mapped to the Alt_l, Alt_l to the Ctrl_l, Return to the Alt_r
+
+        key <RALT> { actions[Group1]=[ RedirectKey(keycode=<RTRN>) ] };
+        key <LALT> { [ Control_L, Control_L ] };
+        key <LCTL> { [ Alt_L ] };
+        key <CAPS> { [ Mode_switch ] };
+
+        modifier_map Control { <LALT> };
+        modifier_map Mod1 { <LCTL> };
+
+        // ////
+
+
+        key <RUS1> { [ k, K ] };
+        key <RUS2> { [ l, L ] };
+        key <RUS3> { [ s, S ] };
+
+
+        key.type[Group1] = "CTRL_QWERTY";
+
+        key <AC02> {
+            symbols[Group1] = [ r, R ],
+            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<RUS3>) ]
+        };
+        key <AC08> {
+            symbols[Group1] = [ e, E ],
+            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<RUS1>) ],
+            actions[Group2]=[ RedirectKey(keycode=<DOWN>) ]
+        };
+        key <AC09> {
+            symbols[Group1] = [ i, I ],
+            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<RUS2>) ],
+            actions[Group2]=[ RedirectKey(keycode=<RGHT>) ]
+        };
+    };
+};
