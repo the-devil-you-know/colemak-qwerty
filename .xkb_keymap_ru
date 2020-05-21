@@ -1,0 +1,188 @@
+xkb_keymap {
+
+    xkb_compat { include "complete" };
+
+    xkb_geometry { include "pc(pc105)" };
+
+    xkb_types {
+
+        include "complete"  
+
+        type "CTRL_QWERTY" {
+
+            modifiers = None+Shift+Control;
+
+            map[None] = Level1;
+            map[Shift] = Level2;
+            map[Control] = Level3;
+
+            level_name[Level1]= "Base";
+            level_name[Level2]= "Shift";
+            level_name[Level3]= "Control";
+
+            // Fix (Shift+n opens new terminal)
+            preserve[Control] = Control;
+        };
+    };
+    
+    xkb_keycodes {
+
+        include "evdev+aliases(qwerty)"
+
+
+        // ////
+        // Virtual keys
+
+        <QD03> = 203;
+        <QD04> = 204;
+        <QD05> = 205;
+        <QD06> = 206;
+        <QD07> = 207;
+        <QD08> = 208;
+        <QD09> = 209;
+        <QD10> = 210;
+
+        <QC02> = 212;
+        <QC03> = 213;
+        <QC04> = 214;
+        <QC05> = 215;
+        <QC06> = 216;
+        <QC07> = 217;
+        <QC08> = 218;
+        <QC09> = 219;
+        <QC10> = 220;
+        <QC11> = 221;
+
+        <QB06> = 227;
+    };
+
+    xkb_symbols {
+
+        include "pc+us"        
+
+
+        // ////
+        // Ctrl_l is mapped to the Alt_l, Alt_l to the Ctrl_l, Return to the Alt_r
+
+        key <RALT> { actions[Group1]=[ RedirectKey(keycode=<RTRN>) ] };
+        key <LALT> { [ Control_L, Control_L ] };
+        key <LCTL> { [ Alt_L ] };
+        key <CAPS> { [ Mode_switch ] };
+
+        modifier_map Control { <LALT> };
+        modifier_map Mod1 { <LCTL> };
+
+        // ////
+
+
+        key <QD03> { [ e, E ] };
+        key <QD04> { [ r, R ] };
+        key <QD05> { [ t, T ] };
+        key <QD06> { [ y, Y ] };
+        key <QD07> { [ u, U ] };
+        key <QD08> { [ i, I ] };
+        key <QD09> { [ o, O ] };
+        key <QD10> { [ p, P ] };
+
+        key <QC02> { [ s, S ] };
+        key <QC03> { [ d, D ] };
+        key <QC04> { [ f, F ] };
+        key <QC05> { [ g, G ] };
+        key <QC06> { [ h, H ] };
+        key <QC07> { [ j, J ] };
+        key <QC08> { [ k, K ] };
+        key <QC09> { [ l, L ] };
+        key <QC10> { [ semicolon, colon ] };
+        key <QC11> { [ apostrophe, quotedbl ] };
+
+        key <QB06> { [ n, N ] };
+
+
+        key.type[Group1] = "CTRL_QWERTY";
+
+        key <AD03> {
+            symbols[Group1] = [ f, F ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD03>) ]
+        };
+        key <AD04> {
+            symbols[Group1] = [ p, P ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD04>) ]
+        };
+        key <AD05> {
+            symbols[Group1] = [ g, G ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD05>) ]
+        };
+        key <AD06> {
+            symbols[Group1] = [ j, J ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD06>) ],
+            actions[Group2]=[ RedirectKey(keycode=<PGUP>) ]
+        };
+        key <AD07> {
+            symbols[Group1] = [ l, L ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD07>) ],
+            actions[Group2]=[ RedirectKey(keycode=<HOME>) ]
+        };
+        key <AD08> {
+            symbols[Group1] = [ u, U ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD08>) ],
+            actions[Group2]=[ RedirectKey(keycode=<UP>) ]
+        };
+        key <AD09> {
+            symbols[Group1] = [ y, Y ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD09>) ],
+            actions[Group2]=[ RedirectKey(keycode=<END>) ]
+        };
+        key <AD10> {
+            symbols[Group1] = [ semicolon, colon ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD10>) ],
+            actions[Group2]=[ RedirectKey(keycode=<DELE>) ]
+        };
+
+        key <AC02> {
+            symbols[Group1] = [ r, R ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC02>) ]
+        };
+        key <AC03> {
+            symbols[Group1] = [ s, S ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC03>) ]
+        };
+        key <AC04> {
+            symbols[Group1] = [ t, T ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC04>) ]
+        };
+        key <AC05> {
+            symbols[Group1] = [ d, D ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC05>) ]
+        };
+        key <AC06> {
+            symbols[Group1] = [ h, H ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC06>) ],
+            actions[Group2]=[ RedirectKey(keycode=<PGDN>) ]
+        };
+        key <AC07> {
+            symbols[Group1] = [ n, N ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC07>) ],
+            actions[Group2]=[ RedirectKey(keycode=<LEFT>) ]
+        };
+        key <AC08> {
+            symbols[Group1] = [ e, E ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC08>) ],
+            actions[Group2]=[ RedirectKey(keycode=<DOWN>) ]
+        };
+        key <AC09> {
+            symbols[Group1] = [ i, I ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC09>) ],
+            actions[Group2]=[ RedirectKey(keycode=<RGHT>) ]
+        };
+        key <AC10> {
+            symbols[Group1] = [ o, O ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC10>) ],
+            actions[Group2]=[ RedirectKey(keycode=<BKSP>) ]
+        };
+
+        key <AB06> {
+            symbols[Group1] = [ k, K ],
+            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<QB06>) ]
+        };
+    };
+};
