@@ -1,8 +1,14 @@
 Colemak-Qwerty hotkeys XKB configuration files for Linux(Ubuntu 20.04)
 
-Inspired by https://github.com/ZeptByteS/dvorak-qwerty
-
 # Installation
+
+```
+$ git clone https://github.com/the-devil-you-know/colemak-qwerty-x11-xkb.git
+$ xkbcomp $HOME/colemak-qwerty-x11-xkb/.xkb_keymap_us $DISPLAY
+```
+**Congratulations! Everything is ready!**
+
+---
 
 It will take 2 minutes
 
