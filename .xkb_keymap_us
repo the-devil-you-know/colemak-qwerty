@@ -29,12 +29,44 @@ xkb_keymap {
 
         include "evdev+aliases(qwerty)"
 
-        <RUS1> = 121;
-        <RUS2> = 122;
-        <RUS3> = 123;
+
+        // ////
+        // Virtual keys
+
+        key <QD01> = 201;
+        key <QD02> = 202;
+        key <QD03> = 203;
+        key <QD04> = 204;
+        key <QD05> = 205;
+        key <QD06> = 206;
+        key <QD07> = 207;
+        key <QD08> = 208;
+        key <QD09> = 209;
+        key <QD10> = 210;
+
+        key <QC01> = 211;
+        key <QC02> = 212;
+        key <QC03> = 213;
+        key <QC04> = 214;
+        key <QC05> = 215;
+        key <QC06> = 216;
+        key <QC07> = 217;
+        key <QC08> = 218;
+        key <QC09> = 219;
+        key <QC10> = 220;
+        key <QC11> = 221;
+
+        key <QB01> = 222;
+        key <QB02> = 223;
+        key <QB03> = 224;
+        key <QB04> = 225;
+        key <QB05> = 226;
+        key <QB06> = 227;
+        key <QB07> = 228;
     };
 
     xkb_symbols {
+
         include "pc+us"        
 
 
@@ -52,25 +84,52 @@ xkb_keymap {
         // ////
 
 
-        key <RUS1> { [ k, K ] };
-        key <RUS2> { [ l, L ] };
-        key <RUS3> { [ s, S ] };
+        key <QD01> { [ q, Q ] };
+        key <QD02> { [ w, W ] };
+        key <QD03> { [ e, E ] };
+        key <QD04> { [ r, R ] };
+        key <QD05> { [ t, T ] };
+        key <QD06> { [ y, Y ] };
+        key <QD07> { [ u, U ] };
+        key <QD08> { [ i, I ] };
+        key <QD09> { [ o, O ] };
+        key <QD10> { [ p, P ] };
+
+        key <QC01> { [ a, A ] };
+        key <QC02> { [ s, S ] };
+        key <QC03> { [ d, D ] };
+        key <QC04> { [ f, F ] };
+        key <QC05> { [ g, G ] };
+        key <QC06> { [ h, H ] };
+        key <QC07> { [ j, J ] };
+        key <QC08> { [ k, K ] };
+        key <QC09> { [ l, L ] };
+        key <QC10> { [ semicolon, colon ] };
+        key <QC11> { [ apostrophe, quotedbl ] };
+
+        key <QB01> { [ z, Z ] };
+        key <QB02> { [ x, X ] };
+        key <QB03> { [ c, C ] };
+        key <QB04> { [ v, V ] };
+        key <QB05> { [ b, B ] };
+        key <QB06> { [ n, N ] };
+        key <QB07> { [ m, M ] };
 
 
         key.type[Group1] = "CTRL_QWERTY";
 
         key <AC02> {
             symbols[Group1] = [ r, R ],
-            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<RUS3>) ]
+            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<QC02>) ]
         };
         key <AC08> {
             symbols[Group1] = [ e, E ],
-            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<RUS1>) ],
+            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<QC08>) ],
             actions[Group2]=[ RedirectKey(keycode=<DOWN>) ]
         };
         key <AC09> {
             symbols[Group1] = [ i, I ],
-            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<RUS2>) ],
+            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<QC09>) ],
             actions[Group2]=[ RedirectKey(keycode=<RGHT>) ]
         };
     };
