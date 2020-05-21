@@ -32,6 +32,10 @@ modifier_map Control { <LALT> };
 modifier_map Mod1 { <LCTL> };
 ```
 
+# Additional features
+
+![additional features](additional_features.jpg)
+
 ---
 
 
