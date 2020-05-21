@@ -203,10 +203,6 @@ xkb_keymap {
             symbols[Group1] = [ o, O ],
             actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC10>) ]
         };
-        key <AC11> {
-            symbols[Group1] = [ apostrophe, quotedbl ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC11>) ]
-        };
 
         key <AC08> {
             symbols[Group1] = [ e, E ],
