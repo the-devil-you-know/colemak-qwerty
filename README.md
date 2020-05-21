@@ -41,6 +41,18 @@ modifier_map Mod1 { <LCTL> };
 
 Hold down the **Mode_switch** (which is mapped to the **Caps**) and you will have a layout like in the picture above.
 
+### Improve Mode_switch by Xcape
+
+To assign an additional one-click function to the **Mode_switch**, you can use xcape. It is possible to have **Caps** work as **Escape** when pressed alone, and as **Mode_switch** when used with another key. 
+
+```
+$ xcape -e 'Mode_switch=Escape'
+```
+
+If you hold a key for longer than the timeout value (default 500 ms), xcape will not generate a key event.
+
+Read more: https://github.com/alols/xcape
+
 
 # Misc
 
