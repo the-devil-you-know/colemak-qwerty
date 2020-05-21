@@ -32,8 +32,31 @@ modifier_map Control { <LALT> };
 modifier_map Mod1 { <LCTL> };
 ```
 
+
 # Additional features
 
 ![additional features](additional_features.jpg)
 
 Hold down the **Mode_switch** (which is mapped to the **Caps**) and you will have a layout like in the picture above.
+
+
+# Misc
+
+## Touchpad configuration
+
+Natural scrolling and two-finger touch. Source: https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
+
+```
+sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
+Section "InputClass"
+        Identifier "touchpad"
+        MatchIsTouchpad "on"
+        Driver "libinput"
+        Option "Tapping" "on"
+        Option "TappingButtonMap" "lrm"
+        Option "NaturalScrolling" "on"
+        Option "ScrollMethod" "twofinger"
+EndSection
+
+EOF
+```
