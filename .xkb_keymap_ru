@@ -96,15 +96,12 @@ xkb_keymap {
 
         key.type[Group1] = "CTRL_QWERTY";
 
-        key <AD01> { [ Cyrillic_be, Cyrillic_BE ] };
-
+        key <AD01> {
+            symbols[Group1] = [ Cyrillic_be, Cyrillic_BE ]
+        };
         key <AD04> {
             symbols[Group1] = [ p, P ],
             actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD04>) ]
-        };
-        key <AD05> {
-            symbols[Group1] = [ g, G ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD05>) ]
         };
         key <AD06> {
             symbols[Group1] = [ j, J ],
