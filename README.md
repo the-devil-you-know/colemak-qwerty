@@ -1,4 +1,4 @@
-Colemak layout with Qwerty hotkeys for Linux(Ubuntu 20.04)
+Colemak layout with Qwerty hotkeys for Linux (Ubuntu 20.04)
 
 
 # Installation
