@@ -14,14 +14,9 @@ xkb_keymap {
 
             map[None] = Level1;
             map[Shift] = Level2;
-            map[Control] = Level3;
 
             level_name[Level1]= "Base";
             level_name[Level2]= "Shift";
-            level_name[Level3]= "Control";
-
-            // Fix (Shift+n opens new terminal)
-            preserve[Control] = Control;
         };
     };
     
@@ -58,11 +53,12 @@ xkb_keymap {
 
     xkb_symbols {
 
-        include "pc+us"        
+        include "pc+ru"        
 
 
         // ////
         // Ctrl_l is mapped to the Alt_l, Alt_l to the Ctrl_l, Return to the Alt_r
+        // If you don't need it, you can remove it safely
 
         key <RALT> { actions[Group1]=[ RedirectKey(keycode=<RTRN>) ] };
         key <LALT> { [ Control_L, Control_L ] };
@@ -100,10 +96,8 @@ xkb_keymap {
 
         key.type[Group1] = "CTRL_QWERTY";
 
-        key <AD03> {
-            symbols[Group1] = [ f, F ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD03>) ]
-        };
+        key <AD01> { [ Cyrillic_be, Cyrillic_BE ] };
+
         key <AD04> {
             symbols[Group1] = [ p, P ],
             actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD04>) ]
@@ -123,8 +117,6 @@ xkb_keymap {
             actions[Group2]=[ RedirectKey(keycode=<HOME>) ]
         };
         key <AD08> {
-            symbols[Group1] = [ u, U ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD08>) ],
             actions[Group2]=[ RedirectKey(keycode=<UP>) ]
         };
         key <AD09> {
