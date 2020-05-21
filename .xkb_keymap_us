@@ -148,7 +148,8 @@ xkb_keymap {
         };
         key <AD08> {
             symbols[Group1] = [ u, U ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD08>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD08>) ],
+            actions[Group2]=[ RedirectKey(keycode=<UP>) ]
         };
         key <AD09> {
             symbols[Group1] = [ y, Y ],
@@ -159,10 +160,54 @@ xkb_keymap {
             actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD10>) ]
         };
 
+        key <AC01> {
+            symbols[Group1] = [ a, A ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC01>) ]
+        };
         key <AC02> {
             symbols[Group1] = [ r, R ],
-            actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<QC02>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC02>) ]
         };
+        key <AC03> {
+            symbols[Group1] = [ s, S ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC03>) ]
+        };
+        key <AC04> {
+            symbols[Group1] = [ t, T ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC04>) ]
+        };
+        key <AC05> {
+            symbols[Group1] = [ d, D ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC05>) ]
+        };
+        key <AC06> {
+            symbols[Group1] = [ h, H ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC06>) ]
+        };
+        key <AC07> {
+            symbols[Group1] = [ n, N ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC07>) ],
+            actions[Group2]=[ RedirectKey(keycode=<LEFT>) ]
+        };
+        key <AC08> {
+            symbols[Group1] = [ e, E ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC08>) ],
+            actions[Group2]=[ RedirectKey(keycode=<DOWN>) ]
+        };
+        key <AC09> {
+            symbols[Group1] = [ i, I ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC09>) ],
+            actions[Group2]=[ RedirectKey(keycode=<RGHT>) ]
+        };
+        key <AC10> {
+            symbols[Group1] = [ o, O ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC10>) ]
+        };
+        key <AC11> {
+            symbols[Group1] = [ apostrophe, quotedbl ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC11>) ]
+        };
+
         key <AC08> {
             symbols[Group1] = [ e, E ],
             actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<QC08>) ],
