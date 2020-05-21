@@ -135,7 +135,7 @@ xkb_keymap {
         key <AD10> {
             symbols[Group1] = [ semicolon, colon ],
             actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD10>) ],
-            actions[Group2]=[ RedirectKey(keycode=<BKSP>) ]
+            actions[Group2]=[ RedirectKey(keycode=<DELE>) ]
         };
 
         key <AC02> {
@@ -176,7 +176,8 @@ xkb_keymap {
         };
         key <AC10> {
             symbols[Group1] = [ o, O ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC10>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC10>) ],
+            actions[Group2]=[ RedirectKey(keycode=<BKSP>) ]
         };
 
         key <AB06> {
