@@ -37,12 +37,14 @@ modifier_map Mod1 { <LCTL> };
 
 ![additional features](additional_features.jpg)
 
+### Extra layout
+
 Hold down the **Mode_switch** (which is mapped to the **Caps**) and you will have a layout like in the picture above.
 
 
 # Misc
 
-## Touchpad configuration
+### Touchpad configuration
 
 Natural scrolling and two-finger touch. Source: https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
 
