@@ -3,26 +3,10 @@ xkb_keymap {
     xkb_compat { include "complete" };
 
     xkb_geometry { include "pc(pc105)" };
+
+    xkb_types { include "complete" };
     
     xkb_keycodes { include "evdev+aliases(qwerty)" };
-
-    xkb_types {
-
-        include "complete"
-
-        type "RU_SYMBOLS" {
-
-            modifiers = None+Shift+Control+Mod1;
-
-            map[None] = Level1;
-            map[Shift] = Level2;
-            map[Control+Mod1] = Level3;
-
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-            level_name[Level3]= "Control + Alt";
-        };
-    };
 
     xkb_symbols {
 
@@ -43,8 +27,6 @@ xkb_keymap {
 
         // ////
 
-
-        key.type[Group1] = "RU_SYMBOLS";
 
         key <AD01> {
             symbols[Group1] = [ Cyrillic_be, Cyrillic_BE ]
@@ -69,7 +51,8 @@ xkb_keymap {
         };
 
         key <AC02> {
-            symbols[Group1] = [ Cyrillic_yeru, Cyrillic_hardsign, Cyrillic_YERU ]
+            symbols[Group1] = [ Cyrillic_yeru, Cyrillic_hardsign ],
+            symbols[Group2] = [ Cyrillic_YERU, Cyrillic_HARDSIGN ]
         };       
         key <AC06> {
             actions[Group2] = [ RedirectKey(keycode=<PGDN>) ]
@@ -88,7 +71,8 @@ xkb_keymap {
         };
 
         key <AB07> {
-            symbols[Group1] = [ Cyrillic_softsign, Cyrillic_shorti ]
+            symbols[Group1] = [ Cyrillic_softsign, Cyrillic_shorti ],
+            symbols[Group2] = [ Cyrillic_SOFTSIGN, Cyrillic_SHORTI ]
         };
         key <AB08> {
             symbols[Group1] = [ comma, less ]
