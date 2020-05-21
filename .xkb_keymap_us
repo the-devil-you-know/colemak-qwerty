@@ -114,11 +114,13 @@ xkb_keymap {
         };
         key <AD06> {
             symbols[Group1] = [ j, J ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD06>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD06>) ],
+            actions[Group2]=[ RedirectKey(keycode=<PGUP>) ]
         };
         key <AD07> {
             symbols[Group1] = [ l, L ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD07>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD07>) ],
+            actions[Group2]=[ RedirectKey(keycode=<HOME>) ]
         };
         key <AD08> {
             symbols[Group1] = [ u, U ],
@@ -127,11 +129,13 @@ xkb_keymap {
         };
         key <AD09> {
             symbols[Group1] = [ y, Y ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD09>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD09>) ],
+            actions[Group2]=[ RedirectKey(keycode=<END>) ]
         };
         key <AD10> {
             symbols[Group1] = [ semicolon, colon ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD10>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD10>) ],
+            actions[Group2]=[ RedirectKey(keycode=<BKSP>) ]
         };
 
         key <AC02> {
@@ -152,7 +156,8 @@ xkb_keymap {
         };
         key <AC06> {
             symbols[Group1] = [ h, H ],
-            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC06>) ]
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QC06>) ],
+            actions[Group2]=[ RedirectKey(keycode=<PGDN>) ]
         };
         key <AC07> {
             symbols[Group1] = [ n, N ],
