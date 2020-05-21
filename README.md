@@ -9,7 +9,7 @@ $ xkbcomp colemak-qwerty-x11-xkb/.xkb_keymap_us $DISPLAY
 ```
 **Congratulations! Everything is ready!**
 
-You may see a lot of warnings, don't worry about it.
+During the installation you may see a lot of warnings, don't worry about it.
 
 
 # Personalization
