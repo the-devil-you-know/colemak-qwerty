@@ -63,6 +63,7 @@ xkb_keymap {
 
         // ////
         // Ctrl_l is mapped to the Alt_l, Alt_l to the Ctrl_l, Return to the Alt_r
+        // If you don't need it, you can remove it safely
 
         key <RALT> { actions[Group1]=[ RedirectKey(keycode=<RTRN>) ] };
         key <LALT> { [ Control_L, Control_L ] };
