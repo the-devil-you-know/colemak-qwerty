@@ -118,6 +118,47 @@ xkb_keymap {
 
         key.type[Group1] = "CTRL_QWERTY";
 
+        key <AD01> {
+            symbols[Group1] = [ q, Q ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD01>) ]
+        };
+        key <AD02> {
+            symbols[Group1] = [ w, W ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD02>) ]
+        };
+        key <AD03> {
+            symbols[Group1] = [ f, F ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD03>) ]
+        };
+        key <AD04> {
+            symbols[Group1] = [ p, P ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD04>) ]
+        };
+        key <AD05> {
+            symbols[Group1] = [ g, G ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD05>) ]
+        };
+        key <AD06> {
+            symbols[Group1] = [ j, J ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD06>) ]
+        };
+        key <AD07> {
+            symbols[Group1] = [ l, L ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD07>) ]
+        };
+        key <AD08> {
+            symbols[Group1] = [ u, U ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD08>) ]
+        };
+        key <AD09> {
+            symbols[Group1] = [ y, Y ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD09>) ]
+        };
+        key <AD10> {
+            symbols[Group1] = [ semicolon, colon ],
+            actions[Group1] = [ NoAction(), NoAction(), RedirectKey(keycode=<QD10>) ]
+        };
+
         key <AC02> {
             symbols[Group1] = [ r, R ],
             actions[Group1]=[ NoAction(), NoAction(), RedirectKey(keycode=<QC02>) ]
