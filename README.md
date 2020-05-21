@@ -36,6 +36,8 @@ modifier_map Mod1 { <LCTL> };
 
 ![additional features](additional_features.jpg)
 
+Hold down the **Mode_switch** (which is mapped to the **Caps**) and you will have a layout like in the picture above.
+
 ---
 
 
