@@ -3,24 +3,10 @@ xkb_keymap {
     xkb_compat { include "complete" };
 
     xkb_geometry { include "pc(pc105)" };
+
+    xkb_types { include "complete" };
     
     xkb_keycodes { include "evdev+aliases(qwerty)" };
-
-    xkb_types {
-
-        include "complete"  
-
-        type "CTRL_QWERTY" {
-
-            modifiers = None+Shift+Control;
-
-            map[None] = Level1;
-            map[Shift] = Level2;
-
-            level_name[Level1]= "Base";
-            level_name[Level2]= "Shift";
-        };
-    };
 
     xkb_symbols {
 
@@ -41,8 +27,6 @@ xkb_keymap {
 
         // ////
 
-
-        key.type[Group1] = "CTRL_QWERTY";
 
         key <AD01> {
             symbols[Group1] = [ Cyrillic_be, Cyrillic_BE ]
