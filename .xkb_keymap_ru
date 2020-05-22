@@ -64,8 +64,7 @@ xkb_keymap {
         };
 
         key <AB07> {
-            symbols[Group1] = [ Cyrillic_softsign, Cyrillic_shorti ],
-            symbols[Group2] = [ Cyrillic_SOFTSIGN, Cyrillic_SHORTI ]
+            symbols[Group2] = [ Cyrillic_shorti, Cyrillic_SHORTI ]
         };
         key <AB08> {
             symbols[Group1] = [ comma, less ]
