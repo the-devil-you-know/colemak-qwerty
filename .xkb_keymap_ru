@@ -72,7 +72,7 @@ xkb_keymap {
         };
         key <AB09> {
             symbols[Group1] = [ period, greater ],
-            symbols[Group2] = [ Cyrillic_yeru, Cyrillic_YERU ]
+            symbols[Group2] = [ Cyrillic_yu, Cyrillic_YU ]
         };
         key <AB10> {
             symbols[Group1] = [ slash, question ]
