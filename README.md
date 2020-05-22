@@ -52,25 +52,3 @@ $ xcape -e 'Mode_switch=Escape'
 If you hold a key for longer than the timeout value (default 500 ms), xcape will not generate a key event.
 
 Read more: https://github.com/alols/xcape
-
-
-# Misc
-
-### Touchpad configuration
-
-Natural scrolling and two-finger touch. Source: https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
-
-```
-sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
-Section "InputClass"
-        Identifier "touchpad"
-        MatchIsTouchpad "on"
-        Driver "libinput"
-        Option "Tapping" "on"
-        Option "TappingButtonMap" "lrm"
-        Option "NaturalScrolling" "on"
-        Option "ScrollMethod" "twofinger"
-EndSection
-
-EOF
-```
