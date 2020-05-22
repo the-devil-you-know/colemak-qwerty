@@ -15,6 +15,7 @@ xkb_keymap {
             map[None] = Level1;
             map[Shift] = Level2;
             map[Control] = Level3;
+            map[Control+Shift] = Level3;
 
             level_name[Level1]= "Base";
             level_name[Level2]= "Shift";
