@@ -46,6 +46,7 @@ Hold down the **Mode_switch** (which is mapped to the **Caps**) and you will hav
 To assign an additional one-click function to the **Mode_switch**, you can use xcape. It is possible to have **Caps** work as **Escape** when pressed alone, and as **Mode_switch** when used with another key. 
 
 ```
+$ sudo apt-get install xcape
 $ xcape -e 'Mode_switch=Escape'
 ```
 
