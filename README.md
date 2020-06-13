@@ -53,3 +53,14 @@ $ xcape -e 'Mode_switch=Escape'
 If you hold a key for longer than the timeout value (default 500 ms), xcape will not generate a key event.
 
 Read more: https://github.com/alols/xcape
+
+
+# But... issues with Intellij Idea
+
+There are some negative side effects when you use Intellij Idea. To fix this I suggest using the following method instead:
+
+```
+$ sudo apt install xdotool
+```
+
+TODO
