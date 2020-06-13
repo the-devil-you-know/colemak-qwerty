@@ -61,6 +61,5 @@ There are some negative side effects when you use Intellij Idea. To fix this I s
 
 ```
 $ sudo apt install xdotool
+$ colemak-qwerty-x11-xkb/.set_us_layout.sh
 ```
-
-TODO
