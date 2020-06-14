@@ -6,4 +6,5 @@ xdotool key Caps_Lock
 xdotool key Caps_Lock
 
 xkbcomp "`dirname $0`/xkb_keymap_us" $DISPLAY 
+killall xcape
 xcape -e 'Mode_switch=Escape'
