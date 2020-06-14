@@ -49,17 +49,18 @@ To assign an additional one-click function to the **Mode_switch**, you can use x
 $ sudo apt-get install xcape
 $ xcape -e 'Mode_switch=Escape'
 ```
+You might faced with some negative side effects when you use Intellij Idea, i suggest to use it instead:
+```
+$ killall xcape && xcape -e 'Mode_switch=Escape'
+```
 
 If you hold a key for longer than the timeout value (default 500 ms), xcape will not generate a key event.
 
 Read more: https://github.com/alols/xcape
 
 
-# But... issues with Intellij Idea
-
-There are some negative side effects when you use Intellij Idea. To fix this I suggest using the following method instead:
+# Misc
 
 ```
-$ sudo apt install xdotool
 $ colemak-qwerty-x11-xkb/set_us_layout.sh
 ```
