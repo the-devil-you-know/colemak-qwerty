@@ -1,5 +1,5 @@
 #!/bin/sh
 
-xkbcomp "`dirname $0`/xkb_keymap_us" $DISPLAY 
+xkbcomp "`dirname $0`/keymap_us.xkb" $DISPLAY 
 killall xcape
 xcape -e 'Mode_switch=Escape'
